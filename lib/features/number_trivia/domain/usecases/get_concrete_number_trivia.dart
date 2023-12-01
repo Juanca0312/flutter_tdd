@@ -8,7 +8,8 @@ class GetConcreteNumberTrivia {
 
   GetConcreteNumberTrivia(this.repository);
 
-  Future<Either<Failure, NumberTrivia>> execute({required int number}) async {
+  // We use call to execute the function without naming it.
+  Future<Either<Failure, NumberTrivia>> call({required int number}) async {
     return await repository.getConcreteNumberTrivia(number);
   }
 }
